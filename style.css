@@ -1,0 +1,82 @@
+body {
+    background-color: #14a599;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+input[type="text"],
+input[type="password"] {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: calc(100% - 22px); 
+    margin-bottom: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10px;
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+}
+
+button:hover::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin-top: 5px;
+}
+
+label[for="username"]::before {
+    content: '🧑🏻';
+}
+
+label[for="password"]::before {
+    content: '🔑';
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    form {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1025px) {
+    form {
+        width: 50%;
+    }
+}
